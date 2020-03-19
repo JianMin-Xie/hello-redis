@@ -296,5 +296,31 @@ public class Application {
 ③调用删除方法，删除 id=4 的用户信息，同时清除缓存：http://localhost:8082/user/delete
 ![SpringCache集成Redis3.JPG](https://i.loli.net/2020/03/20/w9vfDxzJLGbNrhP.jpg)
 
+### 缓存注解
+①@Cacheable
 
+
+根据方法的请求参数对其结果进行缓存：
+* Key：缓存的 Key，可以为空，如果指定要按照 SPEL 表达式编写，如果不指定，则按照方法的所有参数进行组合。
+
+* Value：缓存的名称，必须指定至少一个（如 @Cacheable (value='user')或者 @Cacheable(value={'user1','user2'})）
+
+* Condition：缓存的条件，可以为空，使用 SPEL 编写，返回 true 或者 false，只有为 true 才进行缓存。
+
+②@CachePut
+
+根据方法的请求参数对其结果进行缓存，和 @Cacheable 不同的是，它每次都会触发真实方法的调用。参数描述见上。
+
+③@CacheEvict
+
+根据条件对缓存进行清空：
+* Key：同上。
+
+* Value：同上。
+
+* Condition：同上。
+
+* allEntries：是否清空所有缓存内容，缺省为 false，如果指定为 true，则方法调用后将立即清空所有缓存。
+
+* beforeInvocation：是否在方法执行前就清空，缺省为 false，如果指定为 true，则在方法还没有执行的时候就清空缓存。缺省情况下，如果方法执行抛出异常，则不会清空缓存。
 
