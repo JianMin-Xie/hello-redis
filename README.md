@@ -287,6 +287,9 @@ public class Application {
 
 ![SpringCache集成Redis.JPG](https://i.loli.net/2020/03/20/vNz8BP5iuYSk9xJ.jpg)
 
+RedisDesktopManager中看到存入的user
+![SpringCache集成Redis4.JPG](https://i.loli.net/2020/03/20/lugbKGTQsMwAODk.jpg)
+
 ②再调用查询接口，查询 id=4 的用户信息：http://localhost:8082/user/get/4
 ![SpringCache集成Redis2.JPG](https://i.loli.net/2020/03/20/cfHLlyx5uEVYwAQ.jpg)
 
@@ -294,5 +297,8 @@ public class Application {
 
 ③调用删除方法，删除 id=4 的用户信息，同时清除缓存：http://localhost:8082/user/delete
 ![SpringCache集成Redis3.JPG](https://i.loli.net/2020/03/20/w9vfDxzJLGbNrhP.jpg)
+
+RedisDesktopManager中user已被删除
+![SpringCache集成Redis5.JPG](https://i.loli.net/2020/03/20/gmpjA5a1NMR4Sy2.jpg)
 
 
