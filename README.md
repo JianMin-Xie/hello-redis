@@ -1,3 +1,11 @@
+- [Redis缓存](#redis--)
+- [第一种：RedisTemplate](#----redistemplate)
+  * [POM.xml](#pomxml)
+  * [application.yml：](#applicationyml-)
+  * [创建实体类 User.java：](#------userjava-)
+  * [RedisTemplate 的使用方式](#redistemplate------)
+- [第二种：使用 Spring Cache 集成 Redis](#-------spring-cache----redis)
+  * [缓存注解](#----)
 ## Redis缓存
 结合Spring Boot，有两种方式，一种是直接通过 RedisTemplate 来使用，另一种是使用 Spring Cache 集成 Redis（也就是注解的方式）
 
