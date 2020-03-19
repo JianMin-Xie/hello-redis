@@ -159,6 +159,9 @@ public class UserController {
 然后在浏览器访问，观察后台日志 http://localhost:8082/user/test
 ![RedisTemplate.JPG](https://i.loli.net/2020/03/20/R7me8GUnZ1PETp4.jpg)
 
+RedisDesktopManager中看到存入的userkey  
+![SpringCache集成Redis6.JPG](https://i.loli.net/2020/03/20/dsAmhi1oFtX5HJV.jpg)
+
 ## 第二种：使用 Spring Cache 集成 Redis
 Spring Cache 具备很好的灵活性，不仅能够使用 SPEL（spring expression language）来定义缓存的 Key 和各种 Condition，还提供了开箱即用的缓存临时存储方案，也支持和主流的专业缓存如 EhCache、Redis、Guava 的集成。
 
@@ -287,7 +290,7 @@ public class Application {
 
 ![SpringCache集成Redis.JPG](https://i.loli.net/2020/03/20/vNz8BP5iuYSk9xJ.jpg)
 
-RedisDesktopManager中看到存入的user
+RedisDesktopManager中看到存入的user  
 ![SpringCache集成Redis4.JPG](https://i.loli.net/2020/03/20/lugbKGTQsMwAODk.jpg)
 
 ②再调用查询接口，查询 id=4 的用户信息：http://localhost:8082/user/get/4
@@ -298,7 +301,7 @@ RedisDesktopManager中看到存入的user
 ③调用删除方法，删除 id=4 的用户信息，同时清除缓存：http://localhost:8082/user/delete
 ![SpringCache集成Redis3.JPG](https://i.loli.net/2020/03/20/w9vfDxzJLGbNrhP.jpg)
 
-RedisDesktopManager中user已被删除
+RedisDesktopManager中user已被删除  
 ![SpringCache集成Redis5.JPG](https://i.loli.net/2020/03/20/gmpjA5a1NMR4Sy2.jpg)
 
 
